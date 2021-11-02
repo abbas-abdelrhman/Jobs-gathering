@@ -6,7 +6,7 @@ from scrapy.linkextractors import LinkExtractor
 class QuotesSpider(scrapy.Spider):
     name = "joby"
     # allowed_domains = ['https://wuzzuf.net']
-    start_urls = ['https://wuzzuf.net/search/jobs/?q=python&a=hpb']
+    start_urls = ['http://wuzzuf.net/search/jobs/?q=python&a=hpb']
 
     rules = [
         Rule(LinkExtractor(allow=r'wuzzuf/((?!:).)*$'), callback='parse', follow=True)
